@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function HomePage() {
   const [loaded, setLoaded] = useState(false);
@@ -45,6 +47,7 @@ export default function HomePage() {
       tecnologies: [
         "PHP",
         "Laravel",
+        "MySQL",
         "Livewire",
         "HTML",
         "CSS",
@@ -54,7 +57,7 @@ export default function HomePage() {
         "Ottimizzazione SEO",
       ],
       img: "/tranchidatransfer.png",
-      link: "tranchidatransfer.it"
+      link: "https://tranchidatransfer.it",
     },
     {
       title: "Favignana Transfer",
@@ -71,21 +74,73 @@ export default function HomePage() {
         "Ottimizzazione SEO",
       ],
       img: "/favignanatransfer.png",
-      link: "favignana-transfer.it"
+      link: "https://favignana-transfer.it",
     },
     {
       title: "Base Ecommerce in costruzione",
       desc: "Questo progetto rappresenta la base di un e-commerce completamente scalabile e personalizzabile, sviluppato con Next.js per il frontend e Bootstrap per la parte visiva e responsive. L’architettura prevede componenti modulari riutilizzabili per la gestione di prodotti, categorie, carrello e ordini, permettendo una facile espansione futura. Particolare attenzione è stata data alle performance e all'accessibilità, per garantire un'esperienza utente ottimale su ogni dispositivo. Il backend previsto è in Laravel, che consentirà la gestione completa dei dati, l'integrazione con sistemi di pagamento e la creazione di un pannello amministrativo per il controllo del catalogo, delle offerte e delle statistiche. Il progetto è pensato per essere facilmente estendibile e pronto per future funzionalità avanzate come filtri dinamici, ricerca full-text e gestione multi-lingua.",
       tecnologies: [
         "Backend Laravel",
+        "MySQL",
         "Frontend Next.js",
+        "HTML",
+        "CSS",
+        "JavaScript",
         "Bootstrap",
         "REST API",
       ],
       img: "/ecommerce.png",
-      link: ""
+      link: "",
+    },
+    {
+      title: "Tech Talk",
+      desc: "Mockup di un blog di tecnologia in HTML e CSS puro",
+      tecnologies: ["HTML", "CSS", "JavaScript"],
+      img: "/techtalk.png",
+      link: "https://elegion1.github.io/tech-talk/index.html",
+    },
+    {
+      title: "RED",
+      desc: "Mockup di un sito web realizzato in HTML e CSS partendo da un design statico",
+      tecnologies: ["HTML", "CSS"],
+      img: "/red.png",
+      link: "https://elegion1.github.io/Red-Giovanni-Sugamiele/",
+    },
+    {
+      title: "Thrift Shop",
+      desc: "Mockup di un ecommerce di vendita di articoli usati realizzato in Laravel con Livewire su database MySQL",
+      tecnologies: [
+        "Laravel",
+        "MySQL",
+        "Livewire",
+        "HTML",
+        "CSS",
+        "JavaScript",
+      ],
+      img: "/thriftshop.png",
+      link: "https://github.com/Elegion1/Thrift-Shop-Giovanni-Sugamiele",
+    },
+    {
+      title: "Echo",
+      desc: "Mockup di un social network ispirato a Twitter realizzato in Laravel e Livewire su database MySQL",
+      tecnologies: [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "Livewire",
+        "HTML",
+        "CSS",
+        "JavaScript",
+      ],
+      img: "/echo.png",
+      link: "https://github.com/Elegion1/echo_Giovanni_Sugamiele",
     },
   ];
+
+  const cleanDesc = projects.map((p) => ({
+    ...p,
+    desc: p.desc.replace(/[‘’]/g, "'"),
+  }));
 
   return (
     <main
@@ -136,43 +191,46 @@ export default function HomePage() {
           </h3>
 
           <div className="d-flex flex-column gap-5">
-            {projects.map((p, i) => (
-              <div
-                key={i}
-                className={`row align-items-center g-4 flex-md-row ${
-                  i % 2 !== 0 ? "flex-md-row-reverse" : ""
-                }`}
-              >
-                <div className="col-md-6">
-                  <img
-                    src={p.img}
-                    alt={p.title}
-                    className="img-fluid rounded-4 shadow-sm"
-                    style={{ width: "100%", objectFit: "cover" }}
-                  />
-                </div>
+            {cleanDesc.map((p, i) => (
+              <Link key={i} href={p.link} target="_blank">
+                <div
+                  className={`row align-items-center g-4 flex-md-row ${
+                    i % 2 !== 0 ? "flex-md-row-reverse" : ""
+                  }`}
+                >
+                  <div className="col-md-6">
+                    <Image
+                      src={p.img}
+                      alt={p.title}
+                      width={600} // larghezza desiderata
+                      height={400} // altezza desiderata
+                      className="rounded-4 shadow-sm"
+                      style={{ objectFit: "cover", objectPosition: "top" }}
+                    />
+                  </div>
 
-                <div className="col-md-6">
-                  <h4 className="fw-bold text-primary mb-2">{p.title}</h4>
-                  <p className="text-muted mb-3">{p.desc}</p>
+                  <div className="col-md-6">
+                    <h4 className="fw-bold text-primary mb-2">{p.title}</h4>
+                    <p className="text-muted mb-3">{p.desc}</p>
 
-                  <div className="d-flex flex-wrap gap-2">
-                    {p.tecnologies.map((tech, t) => (
-                      <span
-                        key={t}
-                        className="badge bg-light text-dark border border-secondary-subtle"
-                        style={{
-                          fontSize: "0.8rem",
-                          padding: "0.4em 0.7em",
-                          backgroundColor: "#f8f9fa",
-                        }}
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                    <div className="d-flex flex-wrap gap-2">
+                      {p.tecnologies.map((tech, t) => (
+                        <span
+                          key={t}
+                          className="badge bg-light text-dark border border-secondary-subtle"
+                          style={{
+                            fontSize: "0.8rem",
+                            padding: "0.4em 0.7em",
+                            backgroundColor: "#f8f9fa",
+                          }}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
