@@ -245,7 +245,7 @@ export default function HomePage() {
             href="mailto:ggsugamiele+webdev@gmail.com"
             className="btn btn-outline-primary px-4 rounded-pill"
           >
-            📩 Inviami un'email
+            📩 Inviami un&apos; email
           </a>
           <div className="mt-4">
             <a
