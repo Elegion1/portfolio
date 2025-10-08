@@ -32,12 +32,19 @@ export default function HomePage() {
   }, []);
 
   const skills = [
-    "Laravel",
-    "React",
-    "Next.js",
-    "Bootstrap",
-    "MySQL",
-    "JavaScript",
+    { name: "HTML", level: "expert" },
+    { name: "CSS", level: "expert" },
+    { name: "JavaScript", level: "expert" },
+    { name: "PHP", level: "expert" },
+    { name: "Laravel", level: "expert" },
+    { name: "React", level: "expert" },
+    { name: "Next.js", level: "expert" },
+    { name: "MySQL", level: "expert" },
+    { name: "Tailwind", level: "expert" },
+    { name: "TypeScript", level: "in-progress" },
+    { name: "Node.js", level: "in-progress" },
+    { name: "JAVA", level: "in-progress" },
+    { name: "Python", level: "in-progress" },
   ];
 
   const projects = [
@@ -94,21 +101,21 @@ export default function HomePage() {
     },
     {
       title: "Tech Talk",
-      desc: "Mockup di un blog di tecnologia in HTML e CSS puro",
+      desc: "Mockup di un blog di tecnologia sviluppato interamente in HTML, CSS e JavaScript puro. Il progetto riproduce la struttura e lo stile di un blog moderno, con una homepage per gli articoli, una sezione dedicata alle categorie e un layout responsive ottimizzato per diversi dispositivi. Ideale come esercizio di design statico e gestione semantica dei contenuti.",
       tecnologies: ["HTML", "CSS", "JavaScript"],
       img: "/techtalk.png",
       link: "https://elegion1.github.io/tech-talk/index.html",
     },
     {
       title: "RED",
-      desc: "Mockup di un sito web realizzato in HTML e CSS partendo da un design statico",
+      desc: "Mockup di un sito web realizzato a partire da un design statico, trasformato in un layout HTML e CSS completamente responsive. Il progetto si concentra sulla precisione del markup e sulla fedeltà visiva al design originale, includendo transizioni fluide e una tipografia curata per ottenere un risultato elegante e coerente.",
       tecnologies: ["HTML", "CSS"],
       img: "/red.png",
       link: "https://elegion1.github.io/Red-Giovanni-Sugamiele/",
     },
     {
       title: "Thrift Shop",
-      desc: "Mockup di un ecommerce di vendita di articoli usati realizzato in Laravel con Livewire su database MySQL",
+      desc: "Mockup di un e-commerce per la vendita di articoli usati, sviluppato con Laravel e Livewire su database MySQL. Il progetto include una gestione completa dei prodotti, con pagine dinamiche, componenti reattivi e un’attenzione particolare all’esperienza utente. È presente una funzione di revisione dei prodotti da parte degli amministratori per garantire la qualità dei contenuti, insieme a un sistema automatico di gestione delle immagini. Inoltre, è stata integrata l’API di Google per la rilevazione e censura automatica dei volti nelle foto caricate, assicurando la conformità alle normative sulla privacy. Il progetto è ideato come base scalabile e facilmente estendibile con funzionalità reali di checkout e autenticazione.",
       tecnologies: [
         "Laravel",
         "MySQL",
@@ -122,7 +129,7 @@ export default function HomePage() {
     },
     {
       title: "Echo",
-      desc: "Mockup di un social network ispirato a Twitter realizzato in Laravel e Livewire su database MySQL",
+      desc: "Mockup di un social network ispirato a Twitter, sviluppato in Laravel e Livewire con database MySQL. Il progetto simula un flusso di post, un sistema di profili e un’interfaccia reattiva in tempo reale. È stato pensato come esercizio di architettura MVC e interazione dinamica lato frontend, con l’obiettivo di avvicinarsi al comportamento di una vera piattaforma social.",
       tecnologies: [
         "Laravel",
         "PHP",
@@ -160,21 +167,52 @@ export default function HomePage() {
           </h1>
           <p className="fs-4 text-secondary mb-3">Web Developer</p>
 
-          <div className="d-flex justify-content-center flex-wrap mb-4 gap-2">
-            {skills.map((skill, i) => (
-              <span
-                key={i}
-                className="badge rounded-pill text-bg-light border border-primary-subtle px-3 py-2"
-                style={{
-                  backgroundColor: "#eaf2ff",
-                  color: "#0d6efd",
-                  fontSize: "0.9rem",
-                }}
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
+          <section className="skills-section my-5 text-center">
+            <h3 className="fw-semibold mb-4 text-primary">Le mie competenze</h3>
+
+            <div className="d-flex flex-column align-items-center mb-4 wv-100">
+              {/* --- SKILL COMPLETE --- */}
+              <div className="d-flex justify-content-center flex-wrap gap-2 mb-2 w-50">
+                {skills
+                  .filter((skill) => skill.level !== "in-progress")
+                  .map((skill, i) => (
+                    <span
+                      key={i}
+                      className="badge rounded-pill px-3 py-2 border text-bg-light border-primary-subtle"
+                      style={{
+                        backgroundColor: "#eaf2ff",
+                        color: "#0d6efd",
+                        fontSize: "0.9rem",
+                      }}
+                    >
+                      {skill.name}
+                    </span>
+                  ))}
+              </div>
+
+              {/* --- SKILL IN PROGRESS --- */}
+              <div className="d-flex justify-content-center flex-wrap gap-2">
+                {skills
+                  .filter((skill) => skill.level === "in-progress")
+                  .map((skill, i) => (
+                    <span
+                      key={i}
+                      className="badge rounded-pill px-3 py-2 border text-bg-light border-warning-subtle"
+                      style={{
+                        backgroundColor: "#fff8e1",
+                        color: "#ff9800",
+                        fontSize: "0.9rem",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "4px",
+                      }}
+                    >
+                      ⏳ {skill.name}
+                    </span>
+                  ))}
+              </div>
+            </div>
+          </section>
 
           <a
             href="#projects"
@@ -279,6 +317,11 @@ export default function HomePage() {
         .project-block.in-view {
           opacity: 1 !important;
           transform: translateY(0) !important;
+        }
+        .skill-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 6px 15px rgba(13, 110, 253, 0.2);
+          background-color: #eaf2ff;
         }
       `}</style>
     </main>
