@@ -172,7 +172,7 @@ export default function HomePage() {
 
             <div className="d-flex flex-column align-items-center mb-4 wv-100">
               {/* --- SKILL COMPLETE --- */}
-              <div className="d-flex justify-content-center flex-wrap gap-2 mb-2 w-50">
+              <div className="d-flex justify-content-center flex-wrap gap-2 mb-2 w-md-50">
                 {skills
                   .filter((skill) => skill.level !== "in-progress")
                   .map((skill, i) => (
@@ -240,10 +240,14 @@ export default function HomePage() {
                     <Image
                       src={p.img}
                       alt={p.title}
-                      width={600} // larghezza desiderata
-                      height={400} // altezza desiderata
-                      className="rounded-4 shadow-sm"
-                      style={{ objectFit: "cover", objectPosition: "top" }}
+                      width={600}
+                      height={400}
+                      className="rounded-4 shadow-sm img-fluid w-100"
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "top",
+                        maxHeight: "300px",
+                      }}
                     />
                   </div>
 
@@ -322,6 +326,11 @@ export default function HomePage() {
           transform: translateY(-4px);
           box-shadow: 0 6px 15px rgba(13, 110, 253, 0.2);
           background-color: #eaf2ff;
+        }
+        @media (max-width: 768px) {
+          img {
+            max-height: 220px !important;
+          }
         }
       `}</style>
     </main>
