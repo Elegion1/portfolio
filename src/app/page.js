@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import skills from "@/data/skills.json";
+import projects from "@/data/projects.json";
 
 export default function HomePage() {
   const [loaded, setLoaded] = useState(false);
@@ -31,123 +33,33 @@ export default function HomePage() {
     return () => observer.disconnect();
   }, []);
 
-  const skills = [
-    { name: "HTML", level: "expert" },
-    { name: "CSS", level: "expert" },
-    { name: "JavaScript", level: "expert" },
-    { name: "PHP", level: "expert" },
-    { name: "Laravel", level: "expert" },
-    { name: "React", level: "expert" },
-    { name: "Next.js", level: "expert" },
-    { name: "MySQL", level: "expert" },
-    { name: "Tailwind", level: "expert" },
-    { name: "TypeScript", level: "in-progress" },
-    { name: "Node.js", level: "in-progress" },
-    { name: "JAVA", level: "in-progress" },
-    { name: "Python", level: "in-progress" },
-  ];
+  const parseMonthYear = (s) => {
+    if (!s || typeof s !== "string") return new Date(0); // fallback molto vecchio
+    const parts = s.split("/").map((p) => p.trim());
+    if (parts.length !== 2) return new Date(0);
+    const mm = parseInt(parts[0], 10);
+    const yyyy = parseInt(parts[1], 10);
+    if (Number.isNaN(mm) || Number.isNaN(yyyy)) return new Date(0);
+    // Mese in Date è 0-based
+    return new Date(yyyy, mm - 1, 1);
+  };
 
-  const projects = [
-    {
-      title: "Tranchida Transfer",
-      desc: "Tranchida Transfer è una piattaforma completa per la gestione delle prenotazioni di transfer, escursioni e noleggio auto. Il progetto include la creazione di un dashboard amministrativo personalizzato con funzionalità avanzate come la gestione dei clienti, delle disponibilità, dei pagamenti e delle statistiche. L'interfaccia è stata progettata per essere intuitiva e responsive, garantendo un'esperienza utente ottimale su desktop e dispositivi mobili. Il backend è sviluppato in PHP con Laravel e Livewire, mentre frontend e interattività sono gestiti con HTML, CSS e JavaScript, integrando anche le Google API per calcoli di distanza e localizzazione. Particolare attenzione è stata posta all'ottimizzazione SEO per migliorare la visibilità online.",
-      tecnologies: [
-        "PHP",
-        "Laravel",
-        "MySQL",
-        "Livewire",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Bootstrap",
-        "Google API",
-        "Ottimizzazione SEO",
-      ],
-      img: "/tranchidatransfer.png",
-      link: "https://tranchidatransfer.it",
-    },
-    {
-      title: "Favignana Transfer",
-      desc: "Favignana Transfer è un sistema avanzato per la gestione dei servizi di transfer sull'isola, con possibilità di pagamento online tramite PayPal. Il backend, sviluppato in Laravel, comunica tramite API REST con il frontend Next.js/React, garantendo un'interazione fluida e tempi di risposta rapidi. Il progetto è stato pensato per supportare la gestione simultanea di più prenotazioni, con interfaccia chiara e intuitiva sia per gli utenti che per gli amministratori. La piattaforma è stata ottimizzata per SEO e performance, utilizzando Bootstrap per il layout responsive e garantendo compatibilità su tutti i dispositivi. Inoltre, è stata implementata la gestione dei dati in sicurezza e un sistema di notifiche per aggiornamenti delle prenotazioni.",
-      tecnologies: [
-        "React",
-        "Next.js",
-        "Bootstrap",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Laravel",
-        "REST API",
-        "Ottimizzazione SEO",
-      ],
-      img: "/favignanatransfer.png",
-      link: "https://favignana-transfer.it",
-    },
-    {
-      title: "Base Ecommerce in costruzione",
-      desc: "Questo progetto rappresenta la base di un e-commerce completamente scalabile e personalizzabile, sviluppato con Next.js per il frontend e Bootstrap per la parte visiva e responsive. L’architettura prevede componenti modulari riutilizzabili per la gestione di prodotti, categorie, carrello e ordini, permettendo una facile espansione futura. Particolare attenzione è stata data alle performance e all'accessibilità, per garantire un'esperienza utente ottimale su ogni dispositivo. Il backend previsto è in Laravel, che consentirà la gestione completa dei dati, l'integrazione con sistemi di pagamento e la creazione di un pannello amministrativo per il controllo del catalogo, delle offerte e delle statistiche. Il progetto è pensato per essere facilmente estendibile e pronto per future funzionalità avanzate come filtri dinamici, ricerca full-text e gestione multi-lingua.",
-      tecnologies: [
-        "Backend Laravel",
-        "MySQL",
-        "Frontend Next.js",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Bootstrap",
-        "REST API",
-      ],
-      img: "/ecommerce.png",
-      link: "",
-    },
-    {
-      title: "Tech Talk",
-      desc: "Mockup di un blog di tecnologia sviluppato interamente in HTML, CSS e JavaScript puro. Il progetto riproduce la struttura e lo stile di un blog moderno, con una homepage per gli articoli, una sezione dedicata alle categorie e un layout responsive ottimizzato per diversi dispositivi. Ideale come esercizio di design statico e gestione semantica dei contenuti.",
-      tecnologies: ["HTML", "CSS", "JavaScript"],
-      img: "/techtalk.png",
-      link: "https://elegion1.github.io/tech-talk/index.html",
-    },
-    {
-      title: "RED",
-      desc: "Mockup di un sito web realizzato a partire da un design statico, trasformato in un layout HTML e CSS completamente responsive. Il progetto si concentra sulla precisione del markup e sulla fedeltà visiva al design originale, includendo transizioni fluide e una tipografia curata per ottenere un risultato elegante e coerente.",
-      tecnologies: ["HTML", "CSS"],
-      img: "/red.png",
-      link: "https://elegion1.github.io/Red-Giovanni-Sugamiele/",
-    },
-    {
-      title: "Thrift Shop",
-      desc: "Mockup di un e-commerce per la vendita di articoli usati, sviluppato con Laravel e Livewire su database MySQL. Il progetto include una gestione completa dei prodotti, con pagine dinamiche, componenti reattivi e un’attenzione particolare all’esperienza utente. È presente una funzione di revisione dei prodotti da parte degli amministratori per garantire la qualità dei contenuti, insieme a un sistema automatico di gestione delle immagini. Inoltre, è stata integrata l’API di Google per la rilevazione e censura automatica dei volti nelle foto caricate, assicurando la conformità alle normative sulla privacy. Il progetto è ideato come base scalabile e facilmente estendibile con funzionalità reali di checkout e autenticazione.",
-      tecnologies: [
-        "Laravel",
-        "MySQL",
-        "Livewire",
-        "HTML",
-        "CSS",
-        "JavaScript",
-      ],
-      img: "/thriftshop.png",
-      link: "https://github.com/Elegion1/Thrift-Shop-Giovanni-Sugamiele",
-    },
-    {
-      title: "Echo",
-      desc: "Mockup di un social network ispirato a Twitter, sviluppato in Laravel e Livewire con database MySQL. Il progetto simula un flusso di post, un sistema di profili e un’interfaccia reattiva in tempo reale. È stato pensato come esercizio di architettura MVC e interazione dinamica lato frontend, con l’obiettivo di avvicinarsi al comportamento di una vera piattaforma social.",
-      tecnologies: [
-        "Laravel",
-        "PHP",
-        "MySQL",
-        "Livewire",
-        "HTML",
-        "CSS",
-        "JavaScript",
-      ],
-      img: "/echo.png",
-      link: "https://github.com/Elegion1/echo_Giovanni_Sugamiele",
-    },
-  ];
+  const cleanDesc = projects
+    .map((p) => ({
+      ...p,
+      desc: p.desc.replace(/[‘’]/g, "'"),
+    }))
+    .sort((a, b) => {
+      const dateA = parseMonthYear(a.date);
+      const dateB = parseMonthYear(b.date);
 
-  const cleanDesc = projects.map((p) => ({
-    ...p,
-    desc: p.desc.replace(/[‘’]/g, "'"),
-  }));
+      // Ordina dal più recente al meno recente
+      const diff = dateB - dateA;
+      if (diff !== 0) return diff;
+
+      // Tie-breaker: titolo (opzionale, rende l'ordine stabile)
+      return (b.title || "").localeCompare(a.title || "");
+    });
 
   return (
     <main

@@ -1,0 +1,15 @@
+[
+  { "name": "HTML", "level": "expert" },
+  { "name": "CSS", "level": "expert" },
+  { "name": "JavaScript", "level": "expert" },
+  { "name": "PHP", "level": "expert" },
+  { "name": "Laravel", "level": "expert" },
+  { "name": "React", "level": "expert" },
+  { "name": "Next.js", "level": "expert" },
+  { "name": "MySQL", "level": "expert" },
+  { "name": "Tailwind", "level": "expert" },
+  { "name": "TypeScript", "level": "in-progress" },
+  { "name": "Node.js", "level": "in-progress" },
+  { "name": "JAVA", "level": "in-progress" },
+  { "name": "Python", "level": "in-progress" }
+]
