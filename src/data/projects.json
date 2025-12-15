@@ -4,6 +4,7 @@
     "title": "GSM Sistemi",
     "desc": "Sito web aziendale sviluppato per presentare in modo chiaro e professionale i servizi di GSM Sistemi nel settore degli impianti e delle soluzioni tecnologiche. Il progetto è stato realizzato con particolare attenzione alla struttura dei contenuti, alla velocità di caricamento e all’ottimizzazione SEO, per migliorare la visibilità online e facilitare il contatto con i clienti.",
     "tecnologies": [
+      "Figma",
       "Next.js",
       "HTML",
       "CSS",
@@ -19,6 +20,7 @@
     "title": "Zeus Viaggi",
     "desc": "Sito web realizzato per un’agenzia di viaggi con l’obiettivo di valorizzare le destinazioni e rendere immediata la consultazione delle proposte. L’interfaccia è stata progettata per essere intuitiva e responsive, con una struttura pensata per accompagnare l’utente nella scoperta dei viaggi e migliorare il posizionamento sui motori di ricerca.",
     "tecnologies": [
+      "Figma",
       "Next.js",
       "HTML",
       "CSS",
