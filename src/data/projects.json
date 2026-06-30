@@ -1,135 +1,244 @@
 [
   {
-    "date": "11/2025",
-    "title": "GSM Sistemi",
-    "desc": "Sito web aziendale sviluppato per presentare in modo chiaro e professionale i servizi di GSM Sistemi nel settore degli impianti e delle soluzioni tecnologiche. Il progetto è stato realizzato con particolare attenzione alla struttura dei contenuti, alla velocità di caricamento e all’ottimizzazione SEO, per migliorare la visibilità online e facilitare il contatto con i clienti.",
-    "tecnologies": [
-      "Figma",
-      "Next.js",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstrap",
-      "Ottimizzazione SEO"
-    ],
-    "img": "/gsm-sistemi.png",
-    "link": "https://gsm-sistemi.it"
-  },
-  {
-    "date": "10/2025",
-    "title": "Zeus Viaggi",
-    "desc": "Sito web realizzato per un’agenzia di viaggi con l’obiettivo di valorizzare le destinazioni e rendere immediata la consultazione delle proposte. L’interfaccia è stata progettata per essere intuitiva e responsive, con una struttura pensata per accompagnare l’utente nella scoperta dei viaggi e migliorare il posizionamento sui motori di ricerca.",
-    "tecnologies": [
-      "Figma",
-      "Next.js",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstrap",
-      "Ottimizzazione SEO"
-    ],
-    "img": "/zeusviaggi.png",
-    "link": "https://zeusviaggi.it"
-  },
-  {
-    "date": "06/2024",
+    "id": "tranchidatransfer",
     "title": "Tranchida Transfer",
-    "desc": "Tranchida Transfer è una piattaforma completa per la gestione delle prenotazioni di transfer, escursioni e noleggio auto. Il progetto include la creazione di un dashboard amministrativo personalizzato con funzionalità avanzate come la gestione dei clienti, delle disponibilità, dei pagamenti e delle statistiche. L'interfaccia è stata progettata per essere intuitiva e responsive, garantendo un'esperienza utente ottimale su desktop e dispositivi mobili. Il backend è sviluppato in PHP con Laravel e Livewire, mentre frontend e interattività sono gestiti con HTML, CSS e JavaScript, integrando anche le Google API per calcoli di distanza e localizzazione. Particolare attenzione è stata posta all'ottimizzazione SEO per migliorare la visibilità online.",
-    "tecnologies": [
-      "PHP",
-      "Laravel",
-      "MySQL",
-      "Livewire",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstrap",
-      "Google API",
-      "Ottimizzazione SEO"
-    ],
-    "img": "/tranchidatransfer.png",
-    "link": "https://tranchidatransfer.it"
+    "role": "Full-stack Web Developer",
+    "year": "2024",
+    "stack": ["Laravel", "Blade", "MySQL", "Figma", "Google Maps API"],
+    "overview": {
+      "one_liner": "Piattaforma completa per la gestione online di transfer, escursioni e noleggio auto",
+      "key_points": [
+        "Progettazione UI/UX e logo in Figma",
+        "Sistema di prenotazioni multi-servizio",
+        "Dashboard cliente e admin con calendario",
+        "Notifiche automatiche e API REST",
+        "Prezzi dinamici tramite Google Maps API"
+      ]
+    },
+    "case_study": {
+      "context": "Azienda di transfer senza presenza online, con gestione prenotazioni analogica e alto rischio di errori",
+      "problem": "Digitalizzare l'intero flusso di prenotazione mantenendo semplicita d'uso, performance e scalabilita",
+      "solution": "Progettazione dell'esperienza in Figma, sviluppo full-stack in Laravel con database relazionale, dashboard dedicate e integrazione API per notifiche, pagamenti e servizi esterni",
+      "result": "Sistema centralizzato, responsive e veloce, con SEO dinamico e riduzione degli errori operativi."
+    },
+    "link": "https://tranchidatransfer.it",
+    "links": {
+      "live": "https://tranchidatransfer.it",
+      "repo": null
+    }
   },
   {
-    "date": "02/2025",
+    "id": "gsm-sistemi",
+    "title": "GSM Sistemi",
+    "role": "Full-stack Web Developer",
+    "year": "2025",
+    "stack": ["Next.js", "Bootstrap", "Figma", "SEO"],
+    "overview": {
+      "one_liner": "Sito vetrina per azienda di infissi e zanzariere, progettato per aumentare la visibilita locale",
+      "key_points": [
+        "Progettazione UI/UX in Figma",
+        "Sito vetrina veloce e mobile-first",
+        "Struttura senza database per ridurre complessita",
+        "Contenuti gestiti tramite file JSON",
+        "SEO di base e ottimizzazione mobile"
+      ]
+    },
+    "case_study": {
+      "context": "Azienda di vendita infissi e zanzariere aperta da pochi mesi, senza una presenza online strutturata",
+      "problem": "Aumentare la visibilita e trasmettere affidabilita tramite un sito semplice, chiaro e facilmente consultabile da mobile",
+      "solution": "Progettazione dell'interfaccia in Figma e sviluppo di un sito vetrina in Next.js, senza database, con contenuti gestiti tramite JSON per mantenere il progetto leggero e facilmente manutenibile",
+      "result": "Sito coerente con l'identita visiva del brand, rapido da caricare, responsive e ottimizzato per la navigazione mobile."
+    },
+    "link": "https://gsm-sistemi.it",
+    "links": {
+      "live": "https://gsm-sistemi.it",
+      "repo": null
+    }
+  },
+  {
+    "id": "favignana-transfer",
     "title": "Favignana Transfer",
-    "desc": "Favignana Transfer è un sistema avanzato per la gestione dei servizi di transfer sull'isola, con possibilità di pagamento online tramite PayPal. Il backend, sviluppato in Laravel, comunica tramite API REST con il frontend Next.js/React, garantendo un'interazione fluida e tempi di risposta rapidi. Il progetto è stato pensato per supportare la gestione simultanea di più prenotazioni, con interfaccia chiara e intuitiva sia per gli utenti che per gli amministratori. La piattaforma è stata ottimizzata per SEO e performance, utilizzando Bootstrap per il layout responsive e garantendo compatibilità su tutti i dispositivi. Inoltre, è stata implementata la gestione dei dati in sicurezza e un sistema di notifiche per aggiornamenti delle prenotazioni.",
-    "tecnologies": [
-      "React",
-      "Next.js",
-      "Bootstrap",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Laravel",
-      "REST API",
-      "Ottimizzazione SEO"
-    ],
-    "img": "/favignanatransfer.png",
-    "link": "https://favignana-transfer.it"
+    "role": "Full-stack Web Developer",
+    "year": "2025",
+    "stack": ["Next.js", "Laravel", "MySQL", "Figma", "PayPal"],
+    "overview": {
+      "one_liner": "Sito di prenotazione online per transfer con integrazione di pagamenti",
+      "key_points": [
+        "Progettazione flussi UX in Figma",
+        "Prenotazioni online senza database dedicato",
+        "Integrazione con backend esistente",
+        "Pagamenti online tramite PayPal",
+        "SEO orientato alla crescita rapida"
+      ]
+    },
+    "case_study": {
+      "context": "Azienda di transfer e noleggio auto con necessita di ricevere prenotazioni online per tratte strategiche, mantenendo costi contenuti",
+      "problem": "Gestire prenotazioni e pagamenti online evitando l'uso di un nuovo database per ridurre costi di infrastruttura",
+      "solution": "Progettazione dell'esperienza utente in Figma e sviluppo di un frontend in Next.js collegato a un backend Laravel gia esistente, riutilizzando il database per centralizzare le prenotazioni in un'unica dashboard",
+      "result": "Sistema di prenotazione semplice e funzionale, con pagamenti online integrati e struttura SEO ottimizzata per la crescita."
+    },
+    "link": "https://favignana-transfer.it",
+    "links": {
+      "live": "https://favignana-transfer.it",
+      "repo": null
+    }
   },
   {
-    "date": "08/2025",
+    "id": "zeusviaggi",
+    "title": "Zeus Viaggi",
+    "role": "Web Developer & UI Designer",
+    "year": "2025",
+    "stack": ["Next.js", "Bootstrap", "Figma", "SEO"],
+    "overview": {
+      "one_liner": "Sito web per agenzia di viaggi progettato per valorizzare le destinazioni e migliorare la visibilita online",
+      "key_points": [
+        "Design UI/UX progettato in Figma",
+        "Struttura chiara orientata alla scoperta delle destinazioni",
+        "Layout responsive mobile-first",
+        "Ottimizzazione SEO per contenuti turistici",
+        "Sito leggero e facilmente manutenibile"
+      ]
+    },
+    "case_study": {
+      "context": "Agenzia di viaggi con necessita di una presenza online professionale per presentare le proprie offerte e migliorare il posizionamento sui motori di ricerca",
+      "problem": "Comunicare in modo efficace le proposte di viaggio e guidare l'utente nella consultazione, evitando una struttura dispersiva",
+      "solution": "Progettazione dell'interfaccia in Figma e sviluppo di un sito in Next.js con una struttura dei contenuti pensata per accompagnare l'utente nella scoperta delle destinazioni, mantenendo semplicita e chiarezza",
+      "result": "Sito intuitivo, responsive e coerente a livello grafico, con una base SEO solida per la crescita organica."
+    },
+    "link": "https://zeusviaggi.it",
+    "links": {
+      "live": "https://zeusviaggi.it",
+      "repo": null
+    }
+  },
+  {
+    "id": "ecommerce",
     "title": "Base Ecommerce in costruzione",
-    "desc": "Questo progetto rappresenta la base di un e-commerce completamente scalabile e personalizzabile, sviluppato con Next.js per il frontend e Bootstrap per la parte visiva e responsive. L’architettura prevede componenti modulari riutilizzabili per la gestione di prodotti, categorie, carrello e ordini, permettendo una facile espansione futura. Particolare attenzione è stata data alle performance e all'accessibilità, per garantire un'esperienza utente ottimale su ogni dispositivo. Il backend previsto è in Laravel, che consentirà la gestione completa dei dati, l'integrazione con sistemi di pagamento e la creazione di un pannello amministrativo per il controllo del catalogo, delle offerte e delle statistiche. Il progetto è pensato per essere facilmente estendibile e pronto per future funzionalità avanzate come filtri dinamici, ricerca full-text e gestione multi-lingua.",
-    "tecnologies": [
-      "Backend Laravel",
-      "MySQL",
-      "Frontend Next.js",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstrap",
-      "REST API"
-    ],
-    "img": "/ecommerce.png",
-    "link": ""
+    "role": "Frontend Web Developer",
+    "year": "2025",
+    "stack": ["Next.js", "Bootstrap", "Laravel", "MySQL", "REST API"],
+    "overview": {
+      "one_liner": "Base e-commerce scalabile e modulare, pronta per evoluzioni future",
+      "key_points": [
+        "Architettura a componenti riutilizzabili",
+        "Layout responsive ottimizzato per mobile",
+        "Progetto predisposto a checkout e pannello admin"
+      ]
+    },
+    "case_study": {
+      "context": "Creazione di una base tecnica per un e-commerce estendibile senza vincolarsi subito a tutte le funzionalita avanzate",
+      "problem": "Impostare fondamenta solide per crescita futura mantenendo sviluppo rapido e manutenzione semplice",
+      "solution": "Implementazione di un frontend modulare in Next.js con Bootstrap e pianificazione integrazione backend Laravel/MySQL",
+      "result": "Struttura pronta a estensioni come filtri dinamici, ricerca avanzata e gestione multi-lingua"
+    },
+    "link": "",
+    "links": {
+      "live": null,
+      "repo": null
+    }
   },
   {
-    "date": "02/2024",
+    "id": "techtalk",
     "title": "Tech Talk",
-    "desc": "Mockup di un blog di tecnologia sviluppato interamente in HTML, CSS e JavaScript puro. Il progetto riproduce la struttura e lo stile di un blog moderno, con una homepage per gli articoli, una sezione dedicata alle categorie e un layout responsive ottimizzato per diversi dispositivi. Ideale come esercizio di design statico e gestione semantica dei contenuti.",
-    "tecnologies": ["HTML", "CSS", "JavaScript"],
-    "img": "/techtalk.png",
-    "link": "https://elegion1.github.io/tech-talk/index.html"
+    "role": "Frontend Developer",
+    "year": "2024",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "overview": {
+      "one_liner": "Mockup di blog tech con layout moderno e responsive",
+      "key_points": [
+        "Struttura semantica dei contenuti",
+        "Sezioni categorie e lista articoli",
+        "Ottimizzazione visuale su diversi device"
+      ]
+    },
+    "case_study": {
+      "context": "Esercizio pratico di progettazione frontend e organizzazione contenutistica",
+      "problem": "Riprodurre un blog moderno mantenendo chiarezza visiva e navigazione intuitiva",
+      "solution": "Realizzazione statica con HTML/CSS/JS curando gerarchia tipografica e responsive design",
+      "result": "Mockup coerente e facilmente estendibile a CMS reale"
+    },
+    "link": "https://elegion1.github.io/tech-talk/index.html",
+    "links": {
+      "live": "https://elegion1.github.io/tech-talk/index.html",
+      "repo": null
+    }
   },
   {
-    "date": "03/2024",
+    "id": "red",
     "title": "RED",
-    "desc": "Mockup di un sito web realizzato a partire da un design statico, trasformato in un layout HTML e CSS completamente responsive. Il progetto si concentra sulla precisione del markup e sulla fedeltà visiva al design originale, includendo transizioni fluide e una tipografia curata per ottenere un risultato elegante e coerente.",
-    "tecnologies": ["HTML", "CSS"],
-    "img": "/red.png",
-    "link": "https://elegion1.github.io/Red-Giovanni-Sugamiele/"
+    "role": "Frontend Developer",
+    "year": "2024",
+    "stack": ["HTML", "CSS"],
+    "overview": {
+      "one_liner": "Trasformazione fedele di un design statico in layout responsive",
+      "key_points": [
+        "Alta fedelta al visual originale",
+        "Transizioni fluide e tipografia curata",
+        "Comportamento responsive su viewport diverse"
+      ]
+    },
+    "case_study": {
+      "context": "Progetto orientato alla precisione di implementazione frontend",
+      "problem": "Tradurre un design statico in codice mantenendo qualita estetica e coerenza",
+      "solution": "Sviluppo HTML/CSS con attenzione a proporzioni, spaziature e adattamento mobile",
+      "result": "Interfaccia elegante e solida per successive integrazioni"
+    },
+    "link": "https://elegion1.github.io/Red-Giovanni-Sugamiele/",
+    "links": {
+      "live": "https://elegion1.github.io/Red-Giovanni-Sugamiele/",
+      "repo": null
+    }
   },
   {
-    "date": "05/2024",
+    "id": "thriftshop",
     "title": "Thrift Shop",
-    "desc": "Mockup di un e-commerce per la vendita di articoli usati, sviluppato con Laravel e Livewire su database MySQL. Il progetto include una gestione completa dei prodotti, con pagine dinamiche, componenti reattivi e un’attenzione particolare all’esperienza utente. È presente una funzione di revisione dei prodotti da parte degli amministratori per garantire la qualità dei contenuti, insieme a un sistema automatico di gestione delle immagini. Inoltre, è stata integrata l’API di Google per la rilevazione e censura automatica dei volti nelle foto caricate, assicurando la conformità alle normative sulla privacy. Il progetto è ideato come base scalabile e facilmente estendibile con funzionalità reali di checkout e autenticazione.",
-    "tecnologies": [
-      "Laravel",
-      "MySQL",
-      "Livewire",
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "img": "/thriftshop.png",
-    "link": "https://github.com/Elegion1/Thrift-Shop-Giovanni-Sugamiele"
+    "role": "Full-stack Web Developer",
+    "year": "2024",
+    "stack": ["Laravel", "Livewire", "MySQL", "HTML", "CSS", "JavaScript"],
+    "overview": {
+      "one_liner": "Mockup e-commerce usato con logiche dinamiche e moderazione contenuti",
+      "key_points": [
+        "Gestione prodotti con componenti reattivi",
+        "Workflow di revisione da parte degli admin",
+        "Integrazione API Google per censura automatica volti"
+      ]
+    },
+    "case_study": {
+      "context": "Esperimento full-stack per simulare uno shop con moderazione e privacy by design",
+      "problem": "Gestire contenuti utente e immagini mantenendo sicurezza e qualita dei dati",
+      "solution": "Sviluppo in Laravel/Livewire con moderazione prodotti e automazioni su upload immagini",
+      "result": "Base e-commerce robusta e pronta per evoluzioni verso checkout reale"
+    },
+    "link": "https://github.com/Elegion1/Thrift-Shop-Giovanni-Sugamiele",
+    "links": {
+      "live": null,
+      "repo": "https://github.com/Elegion1/Thrift-Shop-Giovanni-Sugamiele"
+    }
   },
   {
-    "date": "04/2024",
+    "id": "echo",
     "title": "Echo",
-    "desc": "Mockup di un social network ispirato a Twitter, sviluppato in Laravel e Livewire con database MySQL. Il progetto simula un flusso di post, un sistema di profili e un’interfaccia reattiva in tempo reale. È stato pensato come esercizio di architettura MVC e interazione dinamica lato frontend, con l’obiettivo di avvicinarsi al comportamento di una vera piattaforma social.",
-    "tecnologies": [
-      "Laravel",
-      "PHP",
-      "MySQL",
-      "Livewire",
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "img": "/echo.png",
-    "link": "https://github.com/Elegion1/echo_Giovanni_Sugamiele"
+    "role": "Full-stack Web Developer",
+    "year": "2024",
+    "stack": ["Laravel", "PHP", "MySQL", "Livewire", "HTML", "CSS", "JavaScript"],
+    "overview": {
+      "one_liner": "Mockup social in stile Twitter con feed e profili dinamici",
+      "key_points": [
+        "Simulazione flusso post e interazioni base",
+        "Architettura MVC con componenti dinamici",
+        "Interfaccia orientata a UX social rapida"
+      ]
+    },
+    "case_study": {
+      "context": "Progetto didattico per validare pattern social su stack Laravel",
+      "problem": "Riprodurre dinamiche social mantenendo codice strutturato e riusabile",
+      "solution": "Implementazione di feed, profili e componenti reattivi con Laravel/Livewire",
+      "result": "Base social pronta per evoluzioni su autenticazione e interazioni avanzate"
+    },
+    "link": "https://github.com/Elegion1/echo_Giovanni_Sugamiele",
+    "links": {
+      "live": null,
+      "repo": "https://github.com/Elegion1/echo_Giovanni_Sugamiele"
+    }
   }
 ]

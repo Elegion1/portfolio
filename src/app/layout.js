@@ -4,8 +4,8 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
-  title: "Giovanni Sugamiele - Portfolio",
-  description: "Sviluppatore Web | React & Laravel",
+  title: "Giovanni Sugamiele | Web Developer",
+  description: "Sviluppatore Web | PHP, Laravel, JavaScript",
 };
 
 export default function RootLayout({ children }) {
